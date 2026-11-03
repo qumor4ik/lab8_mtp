@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "lab8-mtp"
+version = "1.0.0"
+description = "Лабораторная работа №8: Экосистемы Python (Вариант 2)"
+authors = ["Vadim Nesterov <qumortv@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+flake8 = "^7.0.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"

@@ -102,7 +102,7 @@ class Calculator:
                 y,
             )
             raise ValueError(
-                "Нельзя возводить отрицательного числа в дробную степень"
+                "Нельзя возводить отрицательное число в дробную степень"
             )
         result = float(math.pow(x, y))
         self._record("power", (x, y), result)

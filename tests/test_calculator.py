@@ -105,7 +105,7 @@ class TestCalculatorTDD:
         """Возведение в степень и запрет корня из отрицательного числа."""
         assert calc.power(2, 10) == pytest.approx(1024.0)
         assert calc.power(9, 0.5) == pytest.approx(3.0)
-        with pytest.raises(ValueError, match="отрицательного числа"):
+        with pytest.raises(ValueError, match="отрицательное число"):
             calc.power(-4, 0.5)
 
     def test_sqrt_valid_and_negative(self, calc: Calculator) -> None:

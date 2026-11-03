@@ -4,7 +4,6 @@ import argparse
 import logging
 import sys
 
-import pytest
 import requests
 
 from calculator import Calculator
@@ -74,6 +73,7 @@ def main() -> int:
     """Главная функция маршрутизации режимов запуска."""
     args = parse_args()
     if args.test:
+        import pytest
         return int(pytest.main(["-v"]))
 
     run_demo(api_url=args.url)
